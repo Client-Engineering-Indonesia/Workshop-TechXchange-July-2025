@@ -30,7 +30,7 @@
 ### Datastage Next Gen Lab Environments: 
 
 ### Datastage Next Gen Tutorial 
-Tutorial for Datastage Next Gen: [text](tutorial-datastage)
+Tutorial for Datastage Next Gen: [Tutorial Datastage](tutorial-datastage)
 
 ## Lab 2 - Streamsets
 ### Streamsets Download Lab Files:
@@ -38,7 +38,7 @@ Tutorial for Datastage Next Gen: [text](tutorial-datastage)
 ### Streamsets Lab Environments: 
 
 ### Streamsets Tutorial 
-Tutorial for streamsets: [text](tutorial-streamsets)
+Tutorial for streamsets: [Tutorial Streamsets](tutorial-streamsets)
 
 ## Lab 3 - Knowledge Catalog
 ### Knowledge Catalog Download Lab Files:
@@ -54,5 +54,4 @@ This workshop includes several labs with steps you can follow at your own pace. 
 | xxxx | yyyy |
 
 ### Knowledge Catalog Tutorial 
-Tutorial for knowledge catalog: [text](tutorial-knowledge-catalog)
-
+Tutorial for knowledge catalog: [Tutorial Knowledge Catalog](tutorial-knowledge-catalog)
