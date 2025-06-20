@@ -24,15 +24,35 @@
 | 16.10 - 16.40 | QnA Discussion | 30 |
 | 16.40 | Closing | 0.00 |
 
-## Knowledge Catalog
-### Download the Lab Files:
+## Lab 1 - Datastage Next Gen
+### Datastage Next Gen Download Lab Files:
+
+### Datastage Next Gen Lab Environments: 
+
+### Datastage Next Gen Tutorial 
+Tutorial for Datastage Next Gen: [text](tutorial-datastage)
+
+## Lab 2 - Streamsets
+### Streamsets Download Lab Files:
+
+### Streamsets Lab Environments: 
+
+### Streamsets Tutorial 
+Tutorial for streamsets: [text](tutorial-streamsets)
+
+## Lab 3 - Knowledge Catalog
+### Knowledge Catalog Download Lab Files:
 This workshop includes several labs with steps you can follow at your own pace. To expedite certain steps, you can use the files provided below.
+
 [Lab 3: Data Cataloging and Governance](https://github.com/CloudPak-Outcomes/Outcomes-Projects/blob/main/Knowledge-Catalog-L4-PoX-Lab/Knowledge-Catalog-L4-PoX-Lab.zip)
 
-### Lab Environments: 
+### Knowledge Catalog Lab Environments: 
 | URL | password |
 | --- | --- |
 | xxxx | yyyy |
 | xxxx | yyyy |
 | xxxx | yyyy |
+
+### Knowledge Catalog Tutorial 
+Tutorial for knowledge catalog: [text](tutorial-knowledge-catalog)
 
