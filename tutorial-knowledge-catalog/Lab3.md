@@ -101,4 +101,115 @@ This section creates two data protection rules that are enforced based on the da
 2. Select `Governance` > `Rules`.
 ![section3_2](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image43.png)
 
-3. 
+Goals:
+- [ ] Create Email Address Rule
+- [ ] Create US Social Security Rule
+
+#### 1. Create Email Address Rule
+
+Steps: 
+1. Using the Add rule dropdown, select New data protection rule.
+![section3_3](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image44.png)
+2. In the `Name` field put `Protect Email Addresses`
+3. In the `Business definition` field put `Protect all email addresses using the data privacy advanced masking method`.
+4. Click the `Next` button
+![section3_4](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image45.png)
+
+In the `When does this rule apply?` section specify the rule `Criteria` for `Condition 1` as follows:
+5. Using the `If` statement dropdown on the left, select `Data class`.
+6. Using the `If` statement dropdown on the right, select `contains any`.
+7. Type the word `email` into the `Data class` field.
+8. Select `Email Address` from the data class list that appears. It should be the first entry in the list.
+![section3_5](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image46.png)
+
+In the `What does this rule do?` section specify the rule `Action` as follows:
+9. Using the `Action` dropdown on the left, select `Obfuscate columns`.
+10. Using the `When column has` dropdown in the middle, select `Data class`.
+
+The `Email Address` data class will automatically be filled into the `That contains any` field. Scroll `down` to the `Advanced masking options` section.
+
+![section3_6](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image47.png)
+
+The default `Advanced masking` options set by `Knowledge Catalog` are the correct options for this data protection rule. They should be set as follows:
+
+| Advanced Option | Option Setting |
+| --- | ---  | ---    |
+| Obfuscate method | Preserve format (default) |
+| Username format | Generate user name |
+| Domain name| Original | 
+| Reversibility | Irreversible masking |
+| Consistency | Repeatable |
+| Input Validation | Selected and enabled |
+
+Double check that the options are set correctly. If they are not, change them to the proper setting listed above before you create the rule.
+
+11. Click the `Create` button.
+![section3_7](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image48.png)
+
+The `Where are data protection rules enforced?` dialog appears. This dialog will appear every time you create a data protection rule.
+
+12. Read the message and select the `I understand` checkbox.
+13. Click the `Continue` button
+![section3_8](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image49.png)
+
+A Successfully created! message will appear and the new rule is created.
+
+14. Select the `Rules` breadcrumb to return to the rules main page
+![section3_9](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image50.png)
+
+#### 2. Create US Social Security Rule
+This step creates a data protection rule to mask data classified as a US Social Security Number. It uses the `Obfuscate` masking method using the advanced data privacy options that are specific to a United States social security number.
+
+1. Using the `Add rule` dropdown, select `New data protection rule`.
+![section4_1](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image51.png)
+
+2. In the `Name` field put `Protect US Social Security Numbers`
+3. In the `Business definition` field put `Protect all US social security numbers using the data privacy advanced masking method`.
+4. Click the `Next` button
+![section4_2](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image52.png)
+
+In the `When does this rule apply?` section specify the rule `Criteria` for `Condition 1` as follows:
+5. Using the `If` statement dropdown on the left, select `Data class`.
+6. Using the `If` statement dropdown on the right, select `contains any`.
+7. Type the word `social` into the `Data class` field.
+8. Select `US Social Security Number` from the data class list that appears. It should be the first entry in the list.
+![section4_3](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image53.png)
+
+In the `What does this rule do?` section specify the rule `Action` as follows:
+9. Using the `Action` dropdown on the left, select `Obfuscate columns`.
+10. Using the `When column has` dropdown in the middle, select `Data class`.
+
+The `US Social Security Number ` data class will automatically be filled into the `That contains any` field. Scroll `down` to the `Advanced masking options` section.
+![section4_4](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image54.png)
+
+The default `Advanced masking` options set by `Knowledge Catalog` are the correct options for this data protection rule. They should be set as follows:
+
+| Advanced Option | Option Setting |
+| --- | ---  | ---    |
+| Obfuscate method | Preserve format (default) |
+| Username format | Generate user name |
+| Domain name| Original | 
+| Reversibility | Irreversible masking |
+| Consistency | Repeatable |
+| Input Validation | Selected and enabled |
+
+Double check that the options are set correctly. If they are not, change them to the proper setting listed above before you create the rule.
+
+11. Click the `Create` button.
+![section4_4](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image55.png)
+
+The `Where are data protection rules enforced?` dialog appears. This dialog will appear every time you create a data protection rule.
+
+12. Read the message and select the `I understand` checkbox.
+13. Click the `Continue` button
+![section4_5](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image56.png)
+
+A Successfully created! message will appear and the new rule is created.
+
+14. Select the `Rules` breadcrumb to return to the rules main page.
+![section4_6](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image57.png)
+
+`Two` new data protection rules should now be visible. These new rules now adhere to the governance rules defined by the business to protect all National Identifiers (i.e. US Social Security Numbers) and Email Addresses.
+
+![section4_7](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image58.png)
+
