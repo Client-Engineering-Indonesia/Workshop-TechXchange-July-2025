@@ -1,9 +1,9 @@
 # Follow the steps described below
 
 Table of contents:
-1. [Personas and their roles](https://github.com/Client-Engineering-Indonesia/Data-Intelligent-Incubation-Feb-2025/blob/main/IBM%20Knowledge%20Catalog/Hands-on%20Lab%20-%20IBM%20Knowledge%20Catalog.md#section1)
-2. [Connect your data sources](https://github.com/Client-Engineering-Indonesia/Data-Intelligent-Incubation-Feb-2025/blob/main/IBM%20Knowledge%20Catalog/Hands-on%20Lab%20-%20IBM%20Knowledge%20Catalog.md#section2)
-3. [Define Business Vocabulary](https://github.com/Client-Engineering-Indonesia/Data-Intelligent-Incubation-Feb-2025/blob/main/IBM%20Knowledge%20Catalog/Hands-on%20Lab%20-%20IBM%20Knowledge%20Catalog.md#section3)
+1. [Personas and their roles](https://github.com/Client-Engineering-Indonesia/Workshop-TechXchange-July-2025/blob/main/tutorial-knowledge-catalog/Hands-on%20Lab%20-%20IBM%20Knowledge%20Catalog.md#1-personas-and-their-roles)
+2. [Connect your data sources](https://github.com/Client-Engineering-Indonesia/Workshop-TechXchange-July-2025/blob/main/tutorial-knowledge-catalog/Hands-on%20Lab%20-%20IBM%20Knowledge%20Catalog.md#2-connect-to-data-sources)
+3. [Define Business Vocabulary](https://github.com/Client-Engineering-Indonesia/Workshop-TechXchange-July-2025/blob/main/tutorial-knowledge-catalog/Hands-on%20Lab%20-%20IBM%20Knowledge%20Catalog.md#3-define-business-vocabulary)
 4. [Curate and enrich data assets](https://github.com/Client-Engineering-Indonesia/Data-Intelligent-Incubation-Feb-2025/blob/main/IBM%20Knowledge%20Catalog/Hands-on%20Lab%20-%20IBM%20Knowledge%20Catalog.md#section4)
 5. [Catalog Governed Data](https://github.com/Client-Engineering-Indonesia/Data-Intelligent-Incubation-Feb-2025/blob/main/IBM%20Knowledge%20Catalog/Hands-on%20Lab%20-%20IBM%20Knowledge%20Catalog.md#section5)
 6. [Define Policies and Rules](https://github.com/Client-Engineering-Indonesia/Data-Intelligent-Incubation-Feb-2025/blob/main/IBM%20Knowledge%20Catalog/Hands-on%20Lab%20-%20IBM%20Knowledge%20Catalog.md#section6) 
