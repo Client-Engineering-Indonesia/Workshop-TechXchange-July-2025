@@ -323,7 +323,7 @@ Keep the default target of `This project (Business Catalog Enrichment)`.
 9. Select the `Arrow` on the EMPLOYEE schema. `Do not select the checkbox` next to the `EMPLOYEE` schema. Doing so will select all tables in the schema.
 10. Select the `EMPLOYE`E table from the list.
 11. Click the `Select` button.
-![section8_6]((https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image78.png)
+![section8_6](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image78.png)
 12. Click the `Next` button.
 ![section8_7](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image79.png)
 
@@ -374,3 +374,264 @@ Keep the default target of `This project (Business Catalog Enrichment)`.
 Take the default `Job name` and leave scheduling turned off.
 
 13. Click the `Next` button
+![section9_8](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image92.png)
+
+Take the default `Advanced options` that are selected for the Update on reimport actions.
+
+14. Click the `Next` button.
+![section9_9](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image93.png)
+
+15. Click the `Create` button
+![section9_10](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image94.png)
+
+16. Click the `Refresh` button at the top of the page to update the results.
+![section9_11](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image95.png)
+When the import is complete you should see a message at the top of the page: `Metadata import complete. 3 assets were imported successfully.` The data assets will appear in the Imported assets list and are now added to the project.
+
+17. Select the `Business Catalog Enrichment` breadcrumb to return to the project home page.
+![section9_12](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image96.png)
+
+#### 5. Enrich the Data Assets
+This step uses the automated Metadata enrichment tool to enrich the data assets that were just discovered and imported using the Metadata import tool. Metadata imports can be used as input into Metadata enrichment to automatically profile the data, analyze and assess data quality, and assign data classes and business terms defined as business vocabulary governance artifacts.
+
+Goal:
+- [ ] Run metadata enrichment on imported tables.
+
+Steps: 
+1. Click the `New Asset +` button.
+![section10_1](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image97.png)
+2. Scroll `down` and select the `Enrich data assets with metadata` tool.
+![section10_2](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image98.png)
+3. In the `Name` field put `Business Catalog Enrichment`
+4. In the `Description` field put `Enrich the metadata for all the data assets that are being published to the Business catalog for the analytics project team.`
+5. Click the `Next` button.
+![section10_3](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image99.png)
+6. Click the `Select data from project` button.
+![section10_4](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image100.png)
+7. Select the `Metadata Import` from the Asset types list on the left.
+8. Select the `high level` checkbox in the `Metadata Imports` section to select all the metadata imports you just completed.
+9. Click the `Select` button.
+![section10_5](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image101.png)
+10. Click the `Next` button.
+![section10_6](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image102.png)
+11. Select the checkbox for the `Profile data` Enrichment objective.
+12. Select the checkbox for the `Analyze quality` Enrichment objective.
+13. Select the checkbox for the `Assign terms` Enrichment objective.
+14. Click the `Select categories +` button.
+![section10_7](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image103.png)
+15. Select the checkbox next to the `[uncategorized]` category.
+16. Select the checkbox next to the `Employee` category.
+17. Click the `Select` button.
+![section10_8](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image104.png)
+Scroll `down` to view the `Sampling` options. One of the predefined sampling methods can be chosen or a customized method can be created based on your organization's requirements. For this lab, the `Basic sampling method` will suffice and execute quickly.
+
+18. Take the default `Basic` sampling method. (It should be selected by default).
+19. Click the `Next` button.
+![section10_9](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image105.png)
+
+20. Select the `All data assets` radio button for the `Data scope of reruns` option.
+21. Click the `Next` button.
+![section10_10](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image106.png)
+22. Click the `Create` button.
+![section10_11](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image107.png)
+23. Select the `X` in the top right corner of the `About this metadata enrichment` panel to close it to view the data asset enrichment status.
+24. Select the `Refresh` button to update the status and monitor the progress.
+![section10_12](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image108.png)
+Eventually a notification message of `Metadata enrichment` completed will be displayed. Wait until the `Enrichment status` for all data assets have a status of `Finished`.
+![section10_13](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image109.png)
+
+<h1 id="section3">4. Review Enrichment Results</h1>
+Based on the enrichment scope and objectives, the Metadata enrichment tool automatically profiled the data, analyzed and assessed data quality, assigned and suggested business terms, and assigned data classes to all columns for the data assets included in the metadata enrichment job.
+
+#### 1. Review Asset Enrichment
+This step reviews the Metadata enrichment results at the Asset level.
+
+![section11_1](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image110.png)
+
+Data quality is very accurate in the latest version of Knowledge Catalog and provides the ability to drill down into the data quality analysis details to determine what is contributing to the overall quality score. Let's investigate what is contributing to the EMPLOYEE asset's 99.7% data quality score.
+
+Steps: 
+1. Hover over the `EMPLOYEE` data quality score, click on the `99.7%` score.
+![section11_2](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image111.png)
+2. Click the `Columns` button.
+3. Click the `Score` column header to sort in descending order (arrow pointing up).
+![section11_3](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image112.png)
+
+Scroll `down`to view all the columns. There are `5` columns contributing to the low data quality score. In the interest of time we won't look at all of the columns but we will drill down into data quality details of just the `EXTENSION` column which has the lowest data quality score to demonstrate how to view the data quality details for a column.
+
+4. Click the `EXTENSION` column that has the lowest data quality score.
+![section11_4](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image113.png)
+5. Scroll `down` to the Data quality checks section, Click the `Percentage of data with issues` column header to sort in descending order (arrow pointing down).
+6. Select the `X` in the upper right corner of the dialog to close it.
+![section11_5](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image114.png)
+7. Select the `X` in the upper right corner of the dialog to close it.
+![section11_6](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image115.png)
+
+#### 2. Assign Asset Terms
+This step assigns business terms at the `Asset` level. Knowledge Catalog considers suggested business terms as missing until one of the suggested business terms has been accepted. Based on the metadata enrichment results, no business terms were suggested at the asset level so new terms will be assigned. The data asset business term assignments will be assigned as follows:
+
+| Data Assets | Business Terms Assigned |
+| --- | ---  |
+| Employee| Employee Code, Email Address, SSN |
+| Warehouse Staff | Employee Code, Skill Experience, Skill Rating, Skill Set |
+
+##### Assign EMPLOYEE Terms
+
+Steps: 
+1. Hover over the `Business Terms` column of the `EMPLOYEE` asset, click the `View more` link that appears.
+2. Click the `+` sign in the `Business terms` section of the `Governance` tab.
+![section12_1](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image116.png)
+3. Select the checkbox next to the `Email Address` business term.
+4. Select the checkbox next to the `Employee Code` business term.
+![section12_2](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image117.png)
+5. Using the `search area`, enter the letters `ssn`.
+6. Select the checkbox next to the `SSN` business term.
+7. Click the `Assign` button.
+![section12_3](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image118.png)
+
+#### Assign WAREHOUSE_STAFF.csv Terms
+1. Hover over the `Business Terms` column of the `WAREHOUSE_STAFF.csv` asset, click the `View more` link that appears.
+2. Click the `+` sign in the `Business terms` section of the `Governance` tab.
+![section12_3](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image119.png)
+3. Select the checkbox next to the `Employee Code` business term.
+![section12_4](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image120.png)
+4. Using the `search area`, enter the word `skill`.
+5. Select the checkbox next to the `Skill Rating` business term.
+6. Select the checkbox next to the `Skill Set` business term.
+7. Select the checkbox next to the `Skill Experience` business term.
+8. Click the `Assign` button.
+![section12_5](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image121.png)
+
+##### Mark Assets as Reviewed
+This completes the modifications that will be done at the `Asset` level so the enrichment status of the data assets can be set to `Reviewed`. A meaningful and useful set of business terms are now assigned to all of the data assets that will provide additional information to help end users understand their content.
+
+1. Select the `X` in the top corner of the information panel to close it and gain more screen real estate.
+2. Select the `high level` checkbox to select all assets.
+![section12_6](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image122.png)
+3. Select the `More` action menu on the toolbar.
+4. Select then `Mark as reviewed` action.
+![section12_7](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image123.png)
+5. Click the `Done` button.
+![section12_8](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image124.png)
+6. Click the `Refresh` button in the top right corner of the message displayed.
+![section12_9](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image125.png)
+All of the `Assets` now have a `checkmark` next to them in the `Review status` column indicating that they have been reviewed.
+![section12_10](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image126.png)
+
+#### 3. Review Column Enrichment
+This step reviews the `Metadata enrichment` results at the `Column` level.
+
+1. Click the Columns tab.
+2. Click the Data quality column header to sort the columns in descending order (Arrow pointing up) until the EXTENSION column is at the top of the list.
+
+Data quality at the column level looks excellent with a few exceptions. Five columns: `EXTENSION, COMMUTE_TIME`, `EMAIL`, `LAST_NAME` and `LAST_NAME_MB` have a data quality score of `99.x%`. The remaining `17` columns have a data quality score of `100%`. Scroll `down` the list of columns to review the data quality score for all the columns.
+![section13_11](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image127.png)
+
+Scroll `up` to the first column at the top of the column list.
+
+3. Click the `Columns` column header to sort the columns in ascending order (Arrow pointing up) until `BIRTH_DATE` is the first column at the top.
+![section13_12](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image128.png)
+
+Scroll `down` the list of `22` columns to review the following business term and data class observations:
+
+`22` columns `(100%)` were assigned the correct business term. The `100%` assignment rate was due to the changes that were made earlier to the `Metadata` enrichment term assignment settings. This is outstanding and means that no additional work needs to be done rectifying business term assignments!
+
+However, `17` columns `(77%)` were assigned a data class but only `12` of them `(70%)` were assigned the `correct` data class, which is not bad for a first pass, and the `EMAIL` and `SSN` columns, that are protected by data protection rules, that are based on data class, were assigned the correct data class! `6` columns `(27%)` were `not` assigned a data class.
+
+![section13_12](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image129.png)
+
+This is valuable information for the data steward. It validates the accuracy and completeness of the business vocabulary. As stated earlier, the more time and effort invested up front building out a well defined and accurate business vocabulary the better the outcomes will be during the metadata enrichment data curation process
+
+#### 4. Rectify Column Data Classes
+This step rectifies the incorrect and missing data class assignments. There are `12` columns with correct data class assignments, leaving 10 that need attention. The `Filer` and `Search` capabilities of metadata enrichment will be used to accomplish this quickly. Having correct data class assignments is essential for columns that contain sensitive information, because there might be data protection rules that are dependent on a column's data class assignment to mask the data. Fortunately, the `EMAIL` and `SSN` columns of the `EMPLOYEE` data asset, that are protected by data protection rules, have already been assigned the correct data class!
+
+The column data class assignments will be rectified as follows:
+
+| Data Class Assigned| Data Asset | Column(s) |
+| --- | ---  | ---    |
+| Text | EMPLOYEE | EXTENSION, FAX, LAST_NAME_MB, WORK_PHONE   |
+|  | WAREHOUSE_STAFF | DAYS_OFF, PAY_RATE, SKILL_EXPERIENCE, SKILL_SET |
+| Identifier | EMPLOYEE | EMPLOYEE_CODE |
+|  | WAREHOUSE_STAFF | EMPLOYEE_CODE |
+| Quantity | WAREHOUSE_STAFF | COMMUTE_TIME |
+
+##### Assign the Text Data Class
+This section uses the metadata enrichment filter to isolate and group the `8` columns that will assigned the `Text` data class.
+
+1. Click the `Filter` button in the upper left corner under the `Assets` tab.
+2. Select the `Arrow` to the right of the `Data classes` section to open it.
+3. Select the checkbox next to `No data classes`.
+4. Click the `View all 15` link.
+![section14_1](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image130.png)
+5. Select the checkbox next to the `Identifier` data class.
+6. Select the checkbox next to the `Organization` data class.
+7. Click the `Select` button.
+8. After the dialog closes, Click the `Apply` button in the Filter area.
+![section14_2]https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image131.png
+9. Select the `high level` checkbox to select all columns in the list.
+10. Clear the checkbox next to the `EMPLOYEE_CODE` column for the `EMPLOYEE` data asset.
+11. Clear the checkbox next to the `EMPLOYEE_CODE` column for the `WAREHOUSE_STAFF.csv` data asset.
+![section14_3](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image132.png)
+Scroll `down` to the bottom of the list of columns to the `SSN` column.
+12. Clear the checkbox next to the `SSN` column for the `EMPLOYEE` data asset.
+13. Click the `Assign data class` button on the toolbar.
+![section14_4](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image133.png)
+14. Using the `search area`, enter the word `text`.
+15. Select the `Text` data class.
+16. Click the `Assign` button.
+![section14_5](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image134.png)
+17. Click the `Refresh` button in the top right corner of the message displayed.
+![section14_6](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image135.png)
+18. Click the `Clear` button in the filter area to clear all filters.
+![section14_7](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image136.png)
+
+##### Assign the Identifier Data Class
+This section uses the metadata enrichment filter to isolate and group the `2` columns that will be assigned the `Identifier` data class.
+
+1. Select the checkbox next to the `Commercial and Government Entity Code` data class in the Data class filter area.
+2. Click the `Apply` button.
+![section14_8](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image137.png)
+3. Select the `high level` checkbox to select all columns in the list.
+4. Click the `Assign data class` button on the toolbar.
+![section14_9](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image138.png)
+5. Using the `search area`, enter the word `identifier`.
+6. Select the `Identifier` data class.
+7. Click the `Assign` button.
+![section14_10](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image139.png)
+8. Click the `Refresh` button in the top right corner of the message displayed.
+![section14_11](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image140.png)
+9. Click the `Clear` button in filter area to clear all filters.
+10. Click the `Filter` button to close the filter section.
+![section14_12](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image141.png)
+
+##### Assign the Quantity Data Class
+This section assigns the `Quantity` data class to the `1` remaining column that has an incorrect data class assignment.
+
+1. Hover over the `Code` data class assigned to the `COMMUTE_TIME` column, click the `View more` link that appears.
+2. In the Data class section, hover over the `Code` data class, select the `- minus sign` to remove it.
+![section14_13](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image142.png)
+3. Select the `+ plus` sign in the `Data class` section to assign a data class.
+![section14_14](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image143.png)
+4. Using the `search area`, enter the word `quantity`.
+5. Select the `Quantity` data class.
+6. Click the `Assign` button.
+![section14_15](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image144.png)
+
+#### Mark Columns as Reviewed
+This completes the `Column` corrections so the enrichment status of the columns can be set to `Reviewed`. A correct and accurate set of business terms and data classes are now assigned to all of the columns that will provide additional information to help end users understand the data content and ensure sensitive data is protected.
+
+1. Select the `X` in the top corner of the information panel to close it and gain more screen real estate.
+2. Select the `high level` checkbox to select all assets.
+3. Select the `More` action menu on the toolbar.
+4. Select the `Mark as reviewed` action.
+![section14_16](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image145.png)
+5. Click the `Done` button.
+![section14_17](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image146.png)
+6. Click the `Refresh` button in the top right corner of the message displayed.
+![section14_18](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image147.png)
+All of the `Columns` now have a `checkmark` next to them in the `Review status` column indicating that they have been reviewed. Scroll `down` the list of columns to review the business term and data class assignments, and the review status for all the columns.
+![section14_19](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image148.png)
+
+#### 5. Catalog the Data
+
+
