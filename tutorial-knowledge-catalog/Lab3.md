@@ -133,7 +133,7 @@ The `Email Address` data class will automatically be filled into the `That conta
 The default `Advanced masking` options set by `Knowledge Catalog` are the correct options for this data protection rule. They should be set as follows:
 
 | Advanced Option | Option Setting |
-| --- | ---  | ---    |
+| --- | ---  |
 | Obfuscate method | Preserve format (default) |
 | Username format | Generate user name |
 | Domain name| Original | 
@@ -185,7 +185,7 @@ The `US Social Security Number ` data class will automatically be filled into th
 The default `Advanced masking` options set by `Knowledge Catalog` are the correct options for this data protection rule. They should be set as follows:
 
 | Advanced Option | Option Setting |
-| --- | ---  | ---    |
+| --- | ---  |
 | Obfuscate method | Preserve format (default) |
 | Username format | Generate user name |
 | Domain name| Original | 
@@ -213,3 +213,164 @@ A Successfully created! message will appear and the new rule is created.
 
 ![section4_7](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image58.png)
 
+<h1 id="section3">3. Curate and Enrich Data Assets</h1>
+
+Curation can be a **very labor intensive and time consuming process** and for a lot of organizations it's mostly done manually where data assets are curated one at a time. Advanced data curation, which is included with Knowledge Catalog, and what you will use in this lab, is primarily an automated process where many of the curation tasks are completed automatically, without human intervention, for one to may data assets simultaneously.
+
+#### 1. Create the Enrichment Project
+This step creates the project that will be used to create and execute the automated `Metadata import` and `Metadata enrichment` tools to discover, add, and curate the data assets needed by the analytics project team before they are published to the governed `Business` catalog.
+
+Goals: 
+- [ ] Create a project in Data Studio
+- [ ] Manage access control
+- [ ] Adjust project settings
+
+Steps:
+1. Select the `Navigation` menu (the 4 stacked horizontal lines in the upper left corner).
+![section5_1](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image59.png)
+2. Select the `Projects` > `All projects` menu.
+![section5_2](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image60.png)
+3. Click the `New project+` button.
+![section5_3](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image61.png)
+4. In the `Name` field put `Business Catalog Enrichment`
+5. In the `Description` field put `This project is used to import and enrich the metadata for the data assets that will be published to the Business catalog that will be accessible to the analytics project team for analytics and AI tasks`.
+6. Click the `Create` button
+![section5_4](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image62.png)
+
+When the project creation is complete the project will open up to the `Overview` section of the project.
+
+#### 2. Adjust Project Settings
+For this lab, the **metadata enrichment** `Term assignment` settings that are used by `Knowledge Catalog` to automatically assign business terms will be adjusted. 
+
+Steps: 
+
+1. Click the `Manage` tab.
+2. Select the `Metadata enrichment` settings project menu.
+3. Scroll down until the `Term assignment` settings are at the top of the page.
+4. In the `Term assignment` methods to use area, clear the `Machine learning` and `Data-class-based assignments check boxes`. The only method that will be used and that wil remain selected is `Name matching`.
+5. In the `Select assets` used for training built in model and adjustment area, select the `From Project` radio button.
+6. Click the `Assets` tab.
+
+![section6_1](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image63.png)
+
+#### 3.Add the Platform Connections
+This step adds the Platform connections that were created previously to the project so they can be used by the Metadata import tool to discover and add the relevant data assets to the project
+
+Goal:
+- [ ] Import connections to DB2 and Object Storage
+
+##### Add the Object Storage Connection
+The Object Storage data source connections contains the Warehouse data asset that was requested by the analytics project team.
+
+Steps: 
+1. Click the `New Asset +` button.
+![section7_1](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image64.png)
+2. Select the `Connect to a data source` task.
+![section7_2](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image65.png)
+3. Enter the words `object storage` into the search area.
+4. Select the `IBM Cloud Object Storage` data source type from the left side panel.
+5. Click the `Select a platform connection` tab.
+6. Select the `Object Storage` platform connection radio button.
+7. Click the `Next` button.
+![section7_3](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image66.png)
+8. Click the `Create` button
+![section7_4](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image67.png)
+
+##### Add the Data Warehouse Connection
+The Data Warehouse data source connections contains the `Employee` data that was requested by the analytics project team.
+1. Click the `New Asset +` button.
+![section7_5](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image68.png)
+2. Select the `Connect to a data source` task.
+![section7_6](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image69.png)
+3. Enter the word `db2` into the search area.
+4. Select the `IBM Db2 Warehouse` data source type from the left side panel.
+5. Click the `Select a platform connection` tab.
+6. Select the `Data Warehouse` platform connection radio button.
+7. Click the `Next` button.
+
+![section7_7](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image70.png)
+
+8. Click the `Create` button.
+![section7_8](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image71.png)
+
+The new connections will now appear in the project.
+![section7_9](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image72.png)
+
+#### 4. Import the Data Assests
+This section uses the automated Metadata import tool to quickly and easily connect to data source connections to discover and add the data assets that are relevant to the enrichment project.
+
+Goals:
+- [ ] Import Employee table from DB2 Warehouse
+- [ ] Import some tables from Object Storage
+
+##### Import Employee Data
+This step creates the `Metadata Import` to import the `Employee` data asset from the `Data Warehouse` connection into the project.
+
+1. Click the `New Asset +` button.
+![section8_1](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image73.png)
+2. Scroll down and select the `Import metadata for data assets` tool.
+![section8_2](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image74.png)
+3. In the `Name` field put `Data Warehouse Import`
+4. In the `Description` field put `Discover and import the Employee data asset and associated metadata that were requested by the analytics project team that reside in the Data Warehouse data source`.
+5. Click the `Next` button
+![section8_3](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image75.png)
+Keep the default target of `This project (Business Catalog Enrichment)`.
+6. Click the `Next` button.
+![section8_4](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image76.png)
+7. Click the `Select connection` button
+![section8_5](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image77.png)
+8. Select the `Data Warehouse connection` from the Connection lists on the left.
+9. Select the `Arrow` on the EMPLOYEE schema. `Do not select the checkbox` next to the `EMPLOYEE` schema. Doing so will select all tables in the schema.
+10. Select the `EMPLOYE`E table from the list.
+11. Click the `Select` button.
+![section8_6]((https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image78.png)
+12. Click the `Next` button.
+![section8_7](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image79.png)
+
+Take the default `Job name` and leave scheduling turned off.
+
+13. Click the `Next` button.
+![section8_8](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image80.png)
+
+Take the default `Advanced options` that are selected for the Update on reimport actions.
+
+14. Click the `Next` button.
+![section8_9](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image81.png)
+
+Take a minute to review the import before you create it. Your `Scope` is importing `1` data assets from the `Data Warehouse` connection into the `Business Catalog Enrichment` project as the Target.
+
+15. Click the `Create` button.
+![section8_10](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image82.png)
+16. Click the `Refresh` button at the top of the page to update the results.
+![section8_11](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image83.png)
+17. Select the `Business Catalog Enrichment` project breadcrumb to return to the project home page.
+![section8_12](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image84.png)
+
+##### Import Warehouse Data
+This step creates the `Metadata Import` to import the `Warehouse` data asset from the `Cloud Object Storage` connection into the project.
+1. Click the `New Asset +` button
+![section9_1](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image85.png)
+2. Select the `Import metadata for data assets` tool.
+![section9_2](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image86.png)
+3. In the `Name` field put `Cloud Object Storage Import`
+4. In the `Description` field put `Discover and import the Warehouse data assets and associated metadata that were requested by the analytics project team that reside in the Cloud Object Storage data source.`
+5. Click the `Next` button.
+![section9_3](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image87.png)
+
+Keep the default target of `This project (Business Catalog Enrichment)`.
+
+6. Click the `Next` button.
+![section9_4](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image88.png)
+7. Click the `Select connection` button.
+![section9_5](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image89.png)
+
+8. Select the `Cloud Object Storag`e connection from the Connections list on the left.
+9. Select the `Arrow` on the WAREHOUSE folder. `Do not select the checkbox` next to the `WAREHOUSE` folder. Doing so will select all files in the folder. This method displays what files are in the folder to be selective about which files are available for import.
+10. Select the `WAREHOUSE_STAFF.csv` file from the list.
+11. Click the `Select` button.
+![section9_6](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image90.png)
+12. Click the `Next` button.
+![section9_7](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image91.png)
+Take the default `Job name` and leave scheduling turned off.
+
+13. Click the `Next` button
