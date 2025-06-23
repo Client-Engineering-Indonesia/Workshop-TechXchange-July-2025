@@ -632,6 +632,134 @@ This completes the `Column` corrections so the enrichment status of the columns 
 All of the `Columns` now have a `checkmark` next to them in the `Review status` column indicating that they have been reviewed. Scroll `down` the list of columns to review the business term and data class assignments, and the review status for all the columns.
 ![section14_19](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image148.png)
 
-#### 5. Catalog the Data
+<h1 id="section1">5. Catalog the Data</h1>
 
+The data curation process is complete so its time to create the governed catalog and publish the fully enriched data assets to the catalog so they are ready for use by the analytics project team to accomplish their data and AI analytical objectives.
 
+#### 1. Create the Catalog
+This step creates the `governed` catalog that will be used to publish the fully enriched data assets that were just curated. The catalog will be named the `Business` catalog.
+
+1. Select the `Navigation` menu (the 4 stacked horizontal lines in the upper left corner).
+![section15_1](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image149.png)
+2. Select the `Catalogs` > `All catalogs` menu.
+![section15_2](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image150.png)
+3. Click the `New Catalog +` button
+![section15_3](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image151.png)
+4. In the `Name` field put `Business`
+5. In the `Description` field put `This catalog stores governed assets used by the business for analytical and AI projects.`
+6. Select the checkbox to `Enforce data protection rules`.
+![section15_4](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image152.png)
+7. Click the `OK` button when asked to `Permanently enable rule enforcement?`.
+![section15_5](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image153.png)
+Keep the default settings for Duplicate asset handling and Asset removal.
+8. Click the `Create` button.
+![section15_6](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image154.png)
+A notification message of: `Creating Business, this might take a minute...` will appear. When the creation of the catalog is complete the new Business catalog will open
+![section15_7](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image155.png)
+9. Click the `Access control` tab.
+10. Using the `Add collaborators` dropdown, select `Add user group`.
+![section15_8](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image156.png)
+Make sure the `Viewer` role is selected! It should be selected by default.
+11. Enter the word `all` in the group search area.
+12. Click the `All users` group that is displayed.
+![section15_9](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image157.png)
+13. Click the `Add` button.
+![section15_10](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image158.png)
+A notification message of: `1 group was successfully added to the catalog` will appear.
+14. Select the `Catalogs` breadcrumb to return to the catalog home page.
+![section15_11](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image159.png)
+The new `Business` catalog, `Default` catalog, and the `Platform assets catalog` should now be visible.
+![section15_12](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image160.png)
+
+#### 2. Publish Connections
+This ensures that the data assets that are published after the connections appear first in the list for data consumers to easily find and access.
+
+Steps: 
+1. Select the `Navigation` menu (the 4 stacked horizontal lines in the upper left corner).
+![section16_1](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image161.png)
+2. Select the `Projects` > `All projects` menu.
+![section16_2](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image162.png)
+3. Select the Business Catalog Enrichment project.
+![section16_3](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image163.png)
+4. Click the `Assets` tab.
+5. From the `Assets types` section on the left, select `Data access` > `Connections`.
+6. Click the `Name` column header to sort in descending order (arrow pointing down).
+7. Click the `X` on the `About this project` section to close it.
+![section16_4](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image164.png)
+
+##### Publish Object Storage Connection
+Publish the `Object Storage` connection to the `Business` catalog.
+
+1. Select the checkbox next to the `Object Storage` connection.
+2. Click the `Publish to catalog` button on the toolbar.
+![section17_1](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image165.png)
+3. Make sure the Business catalog is selected. It should be selected by default.
+4. Select the Next button.
+![section17_2](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image166.png)
+5. In the `Description` field put `IBM Cloud Object Storage bucket that contains data files used for analytics and AI.`
+6. Click the `Next` button
+![section17_3](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image167.png)
+7. Click the `Publish` button.
+![section17_4](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image168.png)
+
+##### Publish Data Warehouse Connection
+Publish the Data Warehouse connection to the Business catalog.
+1. Select the checkbox next to the Data Warehouse connection.
+2. Click the Publish to catalog button on the toolbar.
+![section18_1](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image169.png)
+3. Make sure the `Business` catalog is selected. It should be selected by default.
+4. Select the `Next` button.
+![section18_2](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image170.png)
+5. In the `Description` field put `Database that contains enterprise data needed by the business for analytics and AI projects`
+6. Click the `Next` button
+![section18_3](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image171.png)
+7. Click the `Publish` button.
+![section18_4](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image172.png)
+
+#### 3. Publish Data Assets
+This step publishes the data assets to the `Business` catalog. The data assets are published in a specific order to ensure the `Recently added` feature category of the catalog gets populated properly. The `WAREHOUSE_STAFF.csv` data asset will be published first, followed by the `EMPLOYEE` data asset.
+
+1. From the `Assets types` section on the left, select `Data` > `Data assets`.
+2. Click the `Name` column header to sort in descending order (arrow pointing down).
+![section19_1](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image173.png)
+
+#### Publish WAREHOUSE_STAFF Data Asset
+Publish the `WAREHOUSE_STAFF.csv` data asset to the `Business` catalog.
+
+1. Select the checkbox next to the `WAREHOUSE_STAFF.csv` data asset.
+2. Click the `Publish to catalog` button on the toolbar.
+![section20_1](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image174.png)
+3. Make sure the `Business` catalog is selected. It should be selected by default.
+4. Select the `Next` button.
+![section20_2](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image175.png)
+5. In the `Description` field put `All employee that work as staff members in the warehouse processing orders.`
+6. Click the `Next` button.
+![section20_3](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image176.png)
+7. Click the `Publish` button.
+![section20_4](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image177.png)
+
+#### Publish EMPLOYEE Data Asset
+Publish the `EMPLOYEE` data asset to the `Business` catalog.
+
+1. Select the checkbox next to the `EMPLOYEE` data asset.
+2. Click the `Publish to catalog` button on the toolbar.
+![section21_1](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image178.png)
+3. Make sure the `Business` catalog is selected. It should be selected by default.
+4. Select the `Next` button.
+![section21_2](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image179.png)
+5. In the `Description` field put `Official and current Employee master`.
+6. Select the checkbox to `Go to the catalog after publishing it`.
+7. Click the `Next` button.
+![section21_3](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image180.png)
+8. Click the `Publish` button.
+![section21_4](https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image181.png)
+
+<h1 id="section1">6. Login as the Business User</h1>
+
+The `Data Governance Lifecycle` is now complete so the `admin` user will now logout and the `Business User` will login to perform the final section of the lab to review the catalog.
+
+1. Click the user `Avatar` on the toolbar.
+2. Select `Log out` from the menu.
+https://cp4d-outcomes.techzone.ibm.com/img/data-fabric-lab/knowledge-catalog/image213.png
+
+<h1 id="section1">7. Review the Catalog</h1>
