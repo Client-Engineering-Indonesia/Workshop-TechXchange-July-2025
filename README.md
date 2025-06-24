@@ -25,10 +25,10 @@
 | 16.40 | Closing | 0.00 |
 
 ## Lab 1 - Datastage Next Gen
-Tutorial for Datastage Next Gen: [Tutorial Datastage](tutorial-datastage)
+Tutorial for Datastage Next Gen: [Handson Datastage](Lab-1-DataStage)
 
 ## Lab 2 - Streamsets 
-Tutorial for streamsets: [Tutorial Streamsets](tutorial-streamsets)
+Tutorial for streamsets: [Handson Streamsets](Lab-2-Streamsets)
 
 ## Lab 3 - Knowledge Catalog
-Tutorial for knowledge catalog: [Tutorial Knowledge Catalog](tutorial-knowledge-catalog)
+Tutorial for knowledge catalog: [Handson Knowledge Catalog](Lab-3-Knowledge-Catalog)
