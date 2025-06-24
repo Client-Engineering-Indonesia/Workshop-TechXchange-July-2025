@@ -1,5 +1,5 @@
-# Welcome to Workshop-TechXchange-July-2025
-###### *Conducted on June 20, 2025.*
+# Welcome to Workshop-TechXchange-June-2025
+###### *Conducted on June 25, 2025.*
 
 ### Agenda Highlights:
 - Introduction to watsonx.data integration & intelligence
@@ -25,11 +25,10 @@
 | 16.40 | Closing | 0.00 |
 
 ## Lab 1 - Datastage Next Gen
-Handson for Datastage Next Gen: [Hands on Datastage](Lab-1-DataStage)
+Tutorial for Datastage Next Gen: [Tutorial Datastage](tutorial-datastage)
 
 ## Lab 2 - Streamsets 
-Handson for streamsets: [Hands on Streamsets](Lab-2-Streamsets)
+Tutorial for streamsets: [Tutorial Streamsets](tutorial-streamsets)
 
 ## Lab 3 - Knowledge Catalog
-Handson for knowledge catalog: [Hands on Knowledge Catalog](Lab-3-Knowledge-Catalog)
-
+Tutorial for knowledge catalog: [Tutorial Knowledge Catalog](tutorial-knowledge-catalog)
