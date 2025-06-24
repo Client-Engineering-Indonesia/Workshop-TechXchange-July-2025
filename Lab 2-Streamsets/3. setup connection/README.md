@@ -12,7 +12,7 @@ Create the modular connection in the connections tab
    - Select None (Security Protocol=PLAINTEXT) in the security options
      <img width="1280" alt="image" src="https://github.com/user-attachments/assets/71df3f8c-24f0-4fdd-a305-ecf484393f5e" />
      
-   - Copy and paste the JDBC Connection String
+   - Copy and paste the uri
      ```text
      localhost:9092
      ```
@@ -20,10 +20,10 @@ Create the modular connection in the connections tab
 
 2. **Web client connection**
    - Put `Risk Scoring Microservice` as the name and `WebClient` as the type
-     <img width="1280" alt="image" src="https://github.com/user-attachments/assets/b5262e9d-d97f-4f73-b185-d8aaf47a09f7" />
+     <img width="1280" alt="image" src="https://github.com/user-attachments/assets/38aaa224-2d98-4365-85a0-8a22967169ba" />
 
    - Put the URL `http://localhost:8000`, authentication scheme as `None` and Keystore `Automatic (for most HTTP and HTTPS requests). Then save
-     <img width="1280" alt="image" src="https://github.com/user-attachments/assets/81c5867e-084f-4aa8-9c2c-d9a99c4d1eb7" />
+     <img width="1280" alt="image" src="https://github.com/user-attachments/assets/26328010-349c-4f84-b054-4239b253dada" />
 
 3. **Postgres connection**
    - Put `Postgres` as the name and `JDBC` as the type
@@ -33,10 +33,10 @@ Create the modular connection in the connections tab
      ```text
      jdbc:postgresql://localhost:5432/postgres
      ```
-     <img width="1280" alt="image" src="https://github.com/user-attachments/assets/38aaa224-2d98-4365-85a0-8a22967169ba" />
+     <img width="1280" alt="image" src="https://github.com/user-attachments/assets/b5262e9d-d97f-4f73-b185-d8aaf47a09f7" />
 
    - Create a connection 
-     <img width="1280" alt="image" src="https://github.com/user-attachments/assets/26328010-349c-4f84-b054-4239b253dada" />
+     <img width="1280" alt="image" src="https://github.com/user-attachments/assets/81c5867e-084f-4aa8-9c2c-d9a99c4d1eb7" />
 
 All the connections dashboard now:
 <img width="1722" alt="image" src="https://github.com/user-attachments/assets/2bf92350-dc4a-4150-8566-84a2365acced" />
