@@ -1,4 +1,4 @@
-# Welcome to Workshop-TechXchange-July-2025
+# Welcome to Workshop-TechXchange-June-2025
 ###### *Conducted on June 20, 2025.*
 
 ### Agenda Highlights:
