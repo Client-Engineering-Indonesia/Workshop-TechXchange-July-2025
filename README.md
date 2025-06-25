@@ -12,10 +12,10 @@
 | Time | Activity | Duration (mins) |
 | --- | ---  | ---    |
 | 09.00 - 09.10 | Registration & Welcome | 10   |
-| 09.10 - 09.40 | Registration & Welcome | 10   |
+| 09.10 - 09.40 | Handson Lab Setup | 30   |
 | 09.40 - 10.25 | **Present DataStage Next Gen** | 45 |
 | 10.25 - 11.25 | **Hands on Lab DataStage Next Gen** | 60 |
-| 11.25 - 12.25 | *Lunch* | 90 |
+| 11.25 - 12.25 | *Lunch* | 60 |
 | 12.25 - 12.55 | **Present Streamsets** | 30 |
 | 12.55 - 13.55 | **Hands on Lab Streamsets** | 60 |
 | 13.55 - 14.25| **Present Knowledge Catalog** | 30 |
